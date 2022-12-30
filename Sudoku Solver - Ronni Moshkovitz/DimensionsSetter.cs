@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sudoku_Solver___Ronni_Moshkovitz
 {
-    internal class Column
+    internal class DimensionsSetter
     {
     }
 }
