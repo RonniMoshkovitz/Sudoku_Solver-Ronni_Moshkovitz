@@ -8,5 +8,6 @@ namespace Sudoku_Solver___Ronni_Moshkovitz
 {
     internal interface IOutput
     {
+        void ShowOutput(string info);
     }
 }

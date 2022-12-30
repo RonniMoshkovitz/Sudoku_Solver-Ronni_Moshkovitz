@@ -8,5 +8,9 @@ namespace Sudoku_Solver___Ronni_Moshkovitz
 {
     internal class ConsoleOutput : IOutput
     {
+        public void ShowOutput(string info)
+        {
+            Console.WriteLine(info);
+        }
     }
 }
