@@ -8,5 +8,6 @@ namespace Sudoku_Solver___Ronni_Moshkovitz
 {
     internal interface IInput
     {
+        string GetInput();
     }
 }

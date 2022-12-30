@@ -46,7 +46,13 @@
     <Compile Include="Board.cs" />
     <Compile Include="BoardDisplay.cs" />
     <Compile Include="Cell.cs" />
+    <Compile Include="ConsoleInput.cs" />
+    <Compile Include="ConsoleOutput.cs" />
+    <Compile Include="DimensionsSetter.cs" />
+    <Compile Include="FileInput.cs" />
+    <Compile Include="IInput.cs" />
     <Compile Include="InputValidator.cs" />
+    <Compile Include="IOutput.cs" />
     <Compile Include="ITechnique.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
