@@ -71,6 +71,7 @@
     <Compile Include="SudokuHandling\BoardDisplay.cs" />
     <Compile Include="SudokuHandling\SudokuHandler.cs" />
     <Compile Include="SudokuHandling\Timer.cs" />
+    <Compile Include="UserCommunication.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
