@@ -52,6 +52,7 @@
     <Compile Include="BoardSolving\CoverMatrix.cs" />
     <Compile Include="BoardSolving\DancingLinks.cs" />
     <Compile Include="BoardSolving\DLXLayout.cs" />
+    <Compile Include="BoardSolving\Nodes.cs" />
     <Compile Include="Exceptions\IllegalBoardException.cs" />
     <Compile Include="Exceptions\InvalidSudokuStringException.cs" />
     <Compile Include="Exceptions\TextFilePathException.cs" />
