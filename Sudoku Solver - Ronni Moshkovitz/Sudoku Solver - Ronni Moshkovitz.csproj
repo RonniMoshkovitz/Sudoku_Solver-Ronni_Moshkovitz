@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Exceptions\IllegalBoardException.cs" />
     <Compile Include="Exceptions\InvalidSudokuStringException.cs" />
+    <Compile Include="Exceptions\TextFilePathException.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
