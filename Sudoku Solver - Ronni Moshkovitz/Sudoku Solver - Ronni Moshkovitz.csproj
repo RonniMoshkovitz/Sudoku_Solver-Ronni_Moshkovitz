@@ -43,6 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BoardProcessing\Board.cs" />
+    <Compile Include="BoardProcessing\BoardProcessor.cs" />
+    <Compile Include="BoardProcessing\BoardTrunslator.cs" />
+    <Compile Include="BoardProcessing\BoardValidator.cs" />
+    <Compile Include="BoardProcessing\StringValidator.cs" />
+    <Compile Include="BoardProcessing\SudokuParser.cs" />
     <Compile Include="Exceptions\IllegalBoardException.cs" />
     <Compile Include="Exceptions\InvalidSudokuStringException.cs" />
     <Compile Include="Exceptions\TextFilePathException.cs" />
@@ -52,5 +58,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
