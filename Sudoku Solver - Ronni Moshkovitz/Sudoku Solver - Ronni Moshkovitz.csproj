@@ -68,6 +68,7 @@
     <Compile Include="ReadingAndWriting\TextFileReader.cs" />
     <Compile Include="ReadingAndWriting\TextFileWriter.cs" />
     <Compile Include="SudokuHandling\BoardDisplay.cs" />
+    <Compile Include="SudokuHandling\SudokuHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
