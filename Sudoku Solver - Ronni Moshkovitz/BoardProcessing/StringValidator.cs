@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sudoku_Solver___Ronni_Moshkovitz
+namespace Sudoku_Solver___Ronni_Moshkovitz.BoardProcessing
 {
-    internal class SudokuParser
+    internal class StringValidator
     {
     }
 }

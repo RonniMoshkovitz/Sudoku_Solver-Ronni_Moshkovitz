@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sudoku_Solver___Ronni_Moshkovitz
+namespace Sudoku_Solver___Ronni_Moshkovitz.ReadingAndWriting
 {
-    internal interface IInput
+    public interface IReader
     {
-        string GetInput();
     }
 }

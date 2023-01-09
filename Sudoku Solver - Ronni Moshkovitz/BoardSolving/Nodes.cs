@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sudoku_Solver___Ronni_Moshkovitz
+namespace Sudoku_Solver___Ronni_Moshkovitz.BoardSolving
 {
-    internal interface IOutput
+    internal class Nodes
     {
-        void ShowOutput(string info);
     }
 }

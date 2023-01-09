@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sudoku_Solver___Ronni_Moshkovitz
 {
-    internal class ConsoleInput : IInput
+    internal class UserCommunication
     {
-        public string GetInput()
-        {
-            return Console.ReadLine();
-        }
     }
 }
