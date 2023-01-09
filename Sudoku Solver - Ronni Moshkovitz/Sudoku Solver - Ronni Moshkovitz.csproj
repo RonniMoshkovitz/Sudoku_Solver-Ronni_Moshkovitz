@@ -59,6 +59,7 @@
     <Compile Include="Exceptions\InvalidSudokuStringException.cs" />
     <Compile Include="Exceptions\TextFilePathException.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="ProgramDefults.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReadingAndWriting\ConsoleReader.cs" />
     <Compile Include="ReadingAndWriting\ConsoleWriter.cs" />
