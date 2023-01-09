@@ -67,12 +67,13 @@
     <Compile Include="ReadingAndWriting\TextFileAccess.cs" />
     <Compile Include="ReadingAndWriting\TextFileReader.cs" />
     <Compile Include="ReadingAndWriting\TextFileWriter.cs" />
+    <Compile Include="SudokuHandling\BoardDisplay.cs" />
+    <Compile Include="SudokuHandling\SudokuHandler.cs" />
+    <Compile Include="SudokuHandling\Timer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ReadingAndWriting\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
