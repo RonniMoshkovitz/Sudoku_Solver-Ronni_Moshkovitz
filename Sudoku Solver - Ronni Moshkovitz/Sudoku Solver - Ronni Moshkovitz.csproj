@@ -47,6 +47,7 @@
     <Compile Include="BoardProcessing\BoardProcessor.cs" />
     <Compile Include="BoardProcessing\BoardTrunslator.cs" />
     <Compile Include="BoardProcessing\BoardValidator.cs" />
+    <Compile Include="BoardProcessing\StringValidator.cs" />
     <Compile Include="Exceptions\IllegalBoardException.cs" />
     <Compile Include="Exceptions\InvalidSudokuStringException.cs" />
     <Compile Include="Exceptions\TextFilePathException.cs" />
