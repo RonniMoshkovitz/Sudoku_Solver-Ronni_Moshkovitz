@@ -69,6 +69,7 @@
     <Compile Include="ReadingAndWriting\TextFileWriter.cs" />
     <Compile Include="SudokuHandling\BoardDisplay.cs" />
     <Compile Include="SudokuHandling\SudokuHandler.cs" />
+    <Compile Include="SudokuHandling\Timer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
