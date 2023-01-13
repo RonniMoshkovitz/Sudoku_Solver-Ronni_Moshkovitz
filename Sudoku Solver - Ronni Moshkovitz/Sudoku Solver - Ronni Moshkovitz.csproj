@@ -59,7 +59,6 @@
     <Compile Include="Exceptions\InvalidSudokuStringException.cs" />
     <Compile Include="Exceptions\TextFilePathException.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="ProgramDefults.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReadingAndWriting\ConsoleReader.cs" />
     <Compile Include="ReadingAndWriting\ConsoleWriter.cs" />
@@ -71,7 +70,10 @@
     <Compile Include="SudokuHandling\BoardDisplay.cs" />
     <Compile Include="SudokuHandling\SudokuHandler.cs" />
     <Compile Include="SudokuHandling\Timer.cs" />
-    <Compile Include="UserCommunication.cs" />
+    <Compile Include="UIManagement\MenuActions.cs" />
+    <Compile Include="UIManagement\MenuSelections.cs" />
+    <Compile Include="UIManagement\ProgramDefaults.cs" />
+    <Compile Include="UIManagement\UserCommunication.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
