@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace Sudoku_Solver___Ronni_Moshkovitz.ReadingAndWriting
 {
-    internal class ConsoleReader
+    // This class, ConsoleReader implaments the IReader inteface. It reads input from the console.
+    public class ConsoleReader : IReader
     {
+        // This function reads input from the console.
+        public string Read()
+        {
+            return Console.ReadLine();
+        }
     }
 }
