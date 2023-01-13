@@ -21,10 +21,10 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.UIManagement
             _output.Write($"{ProgramDefaults.WELLCOME_MESSAGE}{ProgramDefaults.SUDOKU_RULES}{ProgramDefaults.EXAMPLE}");
         }
 
-        // This function shows thw main menue and follows the command.
+        // This function shows thw main menu and follows the command.
         public static void StartNewRound()
         {
-            MenueSelections.FollowCommand(GetInfo(ProgramDefaults.MENUE).ToLower());
+            MenuSelections.FollowCommand(GetInfo(ProgramDefaults.MENU).ToLower());
         }
 
         // This function requests the user for a file path and reads the sudoku string from there.

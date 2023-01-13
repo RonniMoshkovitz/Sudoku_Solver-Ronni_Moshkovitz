@@ -6,23 +6,23 @@ using System.Threading.Tasks;
 
 namespace Sudoku_Solver___Ronni_Moshkovitz.UIManagement
 {
-    // This class, MenueSelections, is in charge of directing the program according to a given setection string.
-    internal class MenueSelections
+    // This class, MenuSelections, is in charge of directing the program according to a given setection string.
+    internal class MenuSelections
     {
-        // The main menue.
+        // The main menu.
         private static Dictionary<string, Action> _programCommands = new Dictionary<string, Action>()
         {
-            { "rules",  MenueActions.ShowRules},
-            { "solve", MenueActions.RequestSorce},
-            { "example", MenueActions.ShowExample},
-            { "exit", MenueActions.ExitProgram}
+            { "rules",  MenuActions.ShowRules},
+            { "solve", MenuActions.RequestSorce},
+            { "example", MenuActions.ShowExample},
+            { "exit", MenuActions.ExitProgram}
         };
 
         // The input sorce menu.
         private static Dictionary<string, Action> _sudokuSorceOptions = new Dictionary<string, Action>()
         {
-            { "console", MenueActions.BoardFromConsole},
-            { "file", MenueActions.BoardFromFile}
+            { "console", MenuActions.BoardFromConsole},
+            { "file", MenuActions.BoardFromFile}
         };
 
         // This function follows the given command, and preforms it.
@@ -34,7 +34,7 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.UIManagement
         // This function follows the selects the given sorce, and gets the sudoku string from there.
         internal static void ChooseSudokuSorce(string sorce)
         {
-            DirectRequest(sorce, _sudokuSorceOptions, $"There is no such sorce as \"{sorce}\", returning to main menue");
+            DirectRequest(sorce, _sudokuSorceOptions, $"There is no such sorce as \"{sorce}\", returning to main menu");
         }
 
         // This function matches between a request to it's matching function according to the given options.
@@ -48,7 +48,7 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.UIManagement
             // Request not in dictonary.
             else
             {
-                MenueActions.NotFound(notFound);
+                MenuActions.NotFound(notFound);
             }
         }
     }

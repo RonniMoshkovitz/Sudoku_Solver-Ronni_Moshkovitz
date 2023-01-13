@@ -11,7 +11,7 @@ namespace Sudoku_Solver___Ronni_Moshkovitz
     internal class Program
     {
         // This function is the program's main function. It shows the user a start view (wellcome message, rules, and wxample),
-        // and starts new rounds of main menue command selections over and over again.
+        // and starts new rounds of main menu command selections over and over again.
         static void Main(string[] args)
         {
             UserCommunication.ShowStartView();

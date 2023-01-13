@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 namespace Sudoku_Solver___Ronni_Moshkovitz.UIManagement
 {
     // This class ProgramDefaults, is a Configuration class. It contains all the default messages.
-    public static class ProgramDefaults
+    internal static class ProgramDefaults
     {
         // The wellcome message (shown when the program starts).
-        public const string WELLCOME_MESSAGE = @"
+        internal const string WELLCOME_MESSAGE = @"
      __        __   _ _                            _          _   _          
      \ \      / /__| | | ___ ___  _ __ ___   ___  | |_ ___   | |_| |__   ___ 
       \ \ /\ / / _ \ | |/ __/ _ \| '_ ` _ \ / _ \ | __/ _ \  | __| '_ \ / _ \
@@ -31,7 +31,7 @@ This solver gets a sudoku string that represent all the cells of the sudoku boar
 ──────────────────────────────────────────────────────────────────────────────────────────────────────────────
 ";
         // The sudoku puzzle rules.
-        public const string SUDOKU_RULES = @"
+        internal const string SUDOKU_RULES = @"
 ──────────────────────────────────────────────────────────────────────────────────────────────────────────────
     In the Sudoku puzzle each cell has 3 houses.
     There are 3 types of houses:
@@ -77,7 +77,7 @@ This solver gets a sudoku string that represent all the cells of the sudoku boar
 
 ";
         // An example for sudoku string input.
-        public const string EXAMPLE = @"
+        internal const string EXAMPLE = @"
 ──────────────────────────────────────────────────────────────────────────────────────────────────────────────
 Exemple:
     The string:
@@ -110,7 +110,7 @@ Exemple:
 ──────────────────────────────────────────────────────────────────────────────────────────────────────────────
 ";
         // The goodBye message (shown when the user exits the program)
-        public const string GOODBYE_MESSAGE = @"
+        internal const string GOODBYE_MESSAGE = @"
 ──────────────────────────────────────────────────────────────────────────────────────────────────────────────
       _____ _              _                      __                   _             _   _    _     
      |_   _| |_  __ _ _ _ | |__  _  _ ___ _  _   / _|___ _ _   _  _ __(_)_ _  __ _  | |_| |_ (_)___ 
@@ -131,9 +131,9 @@ Created by: Ronni Moshkovitz
 ──────────────────────────────────────────────────────────────────────────────────────────────────────────────
 ";
         // Menue for the program's supported commands.
-        public const string MENUE = @"
+        internal const string MENU = @"
 ┌────────────────────────────────────────────────────┐
-│    Menue:                                          │
+│    Menu:                                           │
 │        Choose one of the following options:        │
 │          ≡ To view rules: enter - rules            │
 │          ≡ To enter board: enter - solve           │
@@ -142,7 +142,7 @@ Created by: Ronni Moshkovitz
 └────────────────────────────────────────────────────┘
 ";
         // Menue for the 
-        public const string INPUT_SORCE_OPTIONS = @"
+        internal const string INPUT_SORCE_OPTIONS = @"
 ┌────────────────────────────────────────────────────┐
 │    Choose input sudoku sorce from the following:   │
 │        ≡ To read from file: enter - file           │

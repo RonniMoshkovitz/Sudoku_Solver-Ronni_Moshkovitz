@@ -70,8 +70,8 @@
     <Compile Include="SudokuHandling\BoardDisplay.cs" />
     <Compile Include="SudokuHandling\SudokuHandler.cs" />
     <Compile Include="SudokuHandling\Timer.cs" />
-    <Compile Include="UIManagement\MenueActions.cs" />
-    <Compile Include="UIManagement\MenueSelections.cs" />
+    <Compile Include="UIManagement\MenuActions.cs" />
+    <Compile Include="UIManagement\MenuSelections.cs" />
     <Compile Include="UIManagement\ProgramDefaults.cs" />
     <Compile Include="UIManagement\UserCommunication.cs" />
   </ItemGroup>

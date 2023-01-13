@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace Sudoku_Solver___Ronni_Moshkovitz.UIManagement
 {
-    // This class, MenueActions is a static class. It contains the actions for the menue selections.
-    internal static class MenueActions
+    // This class, MenuActions is a static class. It contains the actions for the menu selections.
+    internal static class MenuActions
     {
         // This function returns a string of the sudoku puzzle rules.
         internal static void ShowRules()
@@ -30,11 +30,11 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.UIManagement
             Environment.Exit(0);
         }
 
-        // This function shows an input selection sorce menue and follows the user's choice.
+        // This function shows an input selection sorce menu and follows the user's choice.
         internal static void RequestSorce()
         {
             string sorceName = UserCommunication.GetInfo(ProgramDefaults.INPUT_SORCE_OPTIONS).ToLower();
-            MenueSelections.ChooseSudokuSorce(sorceName);
+            MenuSelections.ChooseSudokuSorce(sorceName);
         }
 
         // This function solves and presents a board from a file.
