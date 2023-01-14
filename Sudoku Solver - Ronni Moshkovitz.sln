@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sudoku Solver - Ronni Moshkovitz", "Sudoku Solver - Ronni Moshkovitz\Sudoku Solver - Ronni Moshkovitz.csproj", "{5E189AFF-0D1B-4EA0-815A-E8559D4E4A82}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTesting", "UnitTesting\UnitTesting.csproj", "{80F35CB1-373A-4996-9EA8-C762367A1945}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{5E189AFF-0D1B-4EA0-815A-E8559D4E4A82}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E189AFF-0D1B-4EA0-815A-E8559D4E4A82}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E189AFF-0D1B-4EA0-815A-E8559D4E4A82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80F35CB1-373A-4996-9EA8-C762367A1945}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80F35CB1-373A-4996-9EA8-C762367A1945}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80F35CB1-373A-4996-9EA8-C762367A1945}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80F35CB1-373A-4996-9EA8-C762367A1945}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

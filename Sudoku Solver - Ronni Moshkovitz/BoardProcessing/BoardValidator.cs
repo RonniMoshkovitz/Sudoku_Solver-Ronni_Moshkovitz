@@ -81,7 +81,7 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.BoardProcessing
             int startRow = ToBoxIndex(row);
             int startCol = ToBoxIndex(column);
 
-            int boxNum = startRow / _board.BoxSide + startCol % _board.BoxSide;
+            int boxNum = startRow % _board.BoxSide + startCol / _board.BoxSide;
 
             if (_validBoxes.Contains(boxNum))
                 return;
