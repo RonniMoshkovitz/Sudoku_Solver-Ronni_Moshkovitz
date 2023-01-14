@@ -23,27 +23,27 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.UIManagement
             UserCommunication.ShowInfo(ProgramDefaults.EXAMPLE);
         }
 
-        // This function shows goodBye message and exits the program.
+        // This function shows goodbye message and exits the program.
         internal static void ExitProgram()
         {
             UserCommunication.ShowInfo(ProgramDefaults.GOODBYE_MESSAGE);
             Environment.Exit(0);
         }
 
-        // This function shows an input selection sorce menu and follows the user's choice.
-        internal static void RequestSorce()
+        // This function shows an input selection source menu and follows the user's choice.
+        internal static void RequestSource()
         {
-            string sorceName = UserCommunication.GetInfo(ProgramDefaults.INPUT_SORCE_OPTIONS).ToLower();
-            MenuSelections.ChooseSudokuSorce(sorceName);
+            string sourceName = UserCommunication.GetInfo(ProgramDefaults.INPUT_SORCE_OPTIONS).ToLower();
+            MenuSelections.ChooseSudokuSource(sourceName);
         }
 
         // This function solves and presents a board from a file.
         internal static void BoardFromFile()
         {
-            // Get the data from the file (sudoku string or null if exception accured), and set the file path variable.
+            // Get the data from the file (sudoku string or null if exception occured), and set the file path variable.
             string data = UserCommunication.GetBoardFromFile(out string path);
 
-            // If the data is not null the reading went well, and data contains the sudoku string.
+            // If the data is not null, the reading went well, and data contains the sudoku string.
             if (data != null)
             {
                 string result = SolveBoard(ref data);
@@ -86,8 +86,8 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.UIManagement
             return data;
         }
 
-        // This function Tries to process and generate an handler for the user's sudoku string.
-        // The data starts with the sudoku string in it, but will contain an error message if processing culdn't be compleate.
+        // This function tries to process and generate an handler for the user's sudoku string.
+        // The data starts with the sudoku string in it, but will contain an error message if processing couldn't be completed.
         // It returns true if processing went well, false otherwise.
         private static bool ProcessBoard(out SudokuHandler handler, ref string data)
         {
@@ -101,7 +101,7 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.UIManagement
             {
                 data = invalidString.Message;
             }
-            // The board bracks the sudoku rules.
+            // The board breaks the sudoku rules.
             catch (IllegalBoardException ileagalBoard)
             {
                 data = ileagalBoard.Message;

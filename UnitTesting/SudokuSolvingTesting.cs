@@ -8,10 +8,11 @@ using System.Threading.Tasks;
 
 namespace UnitTesting
 {
+    // This class, SudokuSolvingTesting, preforms unit testing for different given sudoku situations.
     [TestClass]
     public class SudokuSolvingTesting
     {
-        // 9x9 boards to test
+        // 9x9 boards test samples.
         private readonly Dictionary<string, string> _sudokuBoards9 = new Dictionary<string, string>()
         {
             // Empty board
@@ -35,7 +36,7 @@ namespace UnitTesting
              "482675391517893426369412758651739842238541679974286513195364287846127935723958164"},
         };
 
-        // 16x16 boards to test
+        // 16x16 boards test samples.
         private readonly Dictionary<string, string> _sudokuBoards16 = new Dictionary<string, string>()
         {
             // Empty board            
@@ -60,7 +61,7 @@ namespace UnitTesting
         };
 
 
-        // 25x25 boards to test
+        // 25x25 boards test samples.
         private readonly Dictionary<string, string> _sudokuBoards25 = new Dictionary<string, string>()
         {
             // Empty board
@@ -72,16 +73,18 @@ namespace UnitTesting
              "B781?G;:<9H@>6DF4C3=AI52E;:<9G@>6DHF4C3=EAI52?B781>6DH@4C3=FEAI521?B78G;:<9C3=F4AI52E1?B789G;:<@>6DHI52EA?B7819G;:<H@>6D4C3=F781?;>:<9G@C6DH4I3=FB52EA:<9G>C6DH@4I3=FAB52E;781?6DH@CI3=F4AB52E?;781>:<9G3=F4IB52EA?;781G>:<9C6DH@52EAB;781?G>:<9@C6DHI3=F42EAB7:81?;>6<9GC3DH@5=F4I81?;:6<9G>C3DH@I5=F472EAB<9G>63DH@CI5=F4B72EA:81?;DH@C35=F4IB72EA;:81?6<9G>=F4I572EAB;:81?>6<9G3DH@CEAB78<1?;:6D9G>3=H@C2F4I51?;:<D9G>63=H@C52F4I8EAB79G>6D=H@C352F4I78EAB<1?;:H@C3=2F4I578EAB:<1?;D9G>6F4I528EAB7:<1?;6D9G>=H@C3@C3=FE4I5281AB7<9?;:HG>6D4I52E1AB78<9?;:DHG>6F@C3=AB7819?;:<DHG>6=F@C3E4I52?;:<9HG>6D=F@C32E4I51AB78G>6DHF@C3=2E4I581AB79?;:<"}
         };
 
-        // Unsolvable boards to test
-        private readonly Dictionary<string, string> _unsolvableSudokuBoards = new Dictionary<string, string>()
+        // Unsolvable boards test samples.
+        private readonly List<string> _unsolvableSudokuBoards = new List<string>()
         {                
             // Unsolvable 9x9 board
-            {"000000000900000000120000034400000003000201000000004010000000000390102000080400000", ""},
+            "000000000900000000120000034400000003000201000000004010000000000390102000080400000",
                         
             // Unsolvable 16x16 board
-            {"7090804=05030000=8?00<5000009020@0<070000020?008006;10>2?0=00500800004=00@0<00100000<0@7;016>20000006;00>0000=3?000:0>00000?0000?00000000700000000000006009;28?>0000;:0028?>03<40001>08?=000@0050000000080003<500:0900040<000000420?=005000019000000076010>:0?02", ""}
+            "7090804=05030000=8?00<5000009020@0<070000020?008006;10>2?0=00500800004=00@0<00100000<0@7;016>20000006;00>0000=3?000:0>00000?0000?00000000700000000000006009;28?>0000;:0028?>03<40001>08?=000@0050000000080003<500:0900040<000000420?=005000019000000076010>:0?02"
         };
 
+
+        // Test for all difficulty levels 9x9 sudokus.
         [TestMethod]
         public void Solvable9x9()
         {
@@ -99,6 +102,7 @@ namespace UnitTesting
             }
         }
 
+        // Test for all difficulty levels 16x16 sudokus.
         [TestMethod]
         public void Solvable16x16()
         {
@@ -108,14 +112,15 @@ namespace UnitTesting
                 SudokuHandler handler = new SudokuHandler(sudokuString);
                 string solvedString = "";
 
-                //Act test
+                // Act test
                 handler.GetSolvedSudoku(ref solvedString);
 
-                //Assert test
+                // Assert test
                 Assert.AreEqual(_sudokuBoards16[sudokuString], solvedString);
             }
         }
 
+        // Test for empty and extreme 25x25 sudokus.
         [TestMethod]
         public void Solvable25x25()
         {
@@ -125,29 +130,47 @@ namespace UnitTesting
                 SudokuHandler handler = new SudokuHandler(sudokuString);
                 string solvedString = "";
 
-                //Act test
+                // Act test
                 handler.GetSolvedSudoku(ref solvedString);
 
-                //Assert test
+                // Assert test
                 Assert.AreEqual(_sudokuBoards25[sudokuString], solvedString);
             }
         }
 
+        // Test for unsolable sudokus.
         [TestMethod]
         public void Unsolvable()
         {
-            foreach (string sudokuString in _unsolvableSudokuBoards.Keys)
+            foreach (string sudokuString in _unsolvableSudokuBoards)
             {
                 // Arrange test
                 SudokuHandler handler = new SudokuHandler(sudokuString);
                 string solvedString = "";
 
-                //Act test
+                // Act test
                 handler.GetSolvedSudoku(ref solvedString);
 
-                //Assert test
-                Assert.AreEqual(_unsolvableSudokuBoards[sudokuString], solvedString);
+                // Assert test
+                // For unsolvable sudokus, the string result representation is an empty string.
+                Assert.AreEqual("", solvedString);
             }
+        }
+
+        // Test for already solved sudoku.
+        [TestMethod]
+        public void AlreadySolvedSudoku()
+        {
+            // Arrange test
+            string sudokuString = "693741852482659731715832649257984163846173925931526478579268314368415297124397586";
+            SudokuHandler handler = new SudokuHandler(sudokuString);
+            string solvedString = "";
+
+            // Act test
+            handler.GetSolvedSudoku(ref solvedString);
+
+            // Assert test
+            Assert.AreEqual(sudokuString, solvedString);
         }
 
     }

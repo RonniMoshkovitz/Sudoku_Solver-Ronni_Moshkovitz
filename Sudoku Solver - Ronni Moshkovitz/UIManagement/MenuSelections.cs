@@ -13,13 +13,13 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.UIManagement
         private static Dictionary<string, Action> _programCommands = new Dictionary<string, Action>()
         {
             { "rules",  MenuActions.ShowRules},
-            { "solve", MenuActions.RequestSorce},
+            { "solve", MenuActions.RequestSource},
             { "example", MenuActions.ShowExample},
             { "exit", MenuActions.ExitProgram}
         };
 
-        // The input sorce menu.
-        private static Dictionary<string, Action> _sudokuSorceOptions = new Dictionary<string, Action>()
+        // The input source menu.
+        private static Dictionary<string, Action> _sudokuSourceOptions = new Dictionary<string, Action>()
         {
             { "console", MenuActions.BoardFromConsole},
             { "file", MenuActions.BoardFromFile}
@@ -32,9 +32,9 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.UIManagement
         }
 
         // This function follows the selects the given sorce, and gets the sudoku string from there.
-        internal static void ChooseSudokuSorce(string sorce)
+        internal static void ChooseSudokuSource(string source)
         {
-            DirectRequest(sorce, _sudokuSorceOptions, $"There is no such sorce as \"{sorce}\", returning to main menu");
+            DirectRequest(source, _sudokuSourceOptions, $"There is no such sorce as \"{source}\", returning to main menu");
         }
 
         // This function matches between a request to it's matching function according to the given options.

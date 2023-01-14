@@ -18,7 +18,7 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.BoardProcessing
         // Board leyput grid
         internal readonly int[,] Grid;
 
-        //
+        // Empty cells count.
         internal int EmptyCount;
 
         // Board side length
@@ -35,13 +35,16 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.BoardProcessing
             set { Grid[row, column] = value; }
         }
 
-        // Constructor that initialises the Board object.
+        // Constructor that initializes the Board object.
         internal Board(int[,] layout, int boardSide)
         {
             Grid = layout;
 
+            // Setting dimensions
             Side = boardSide;
             BoxSide = (int)Math.Sqrt(Side);
+
+            // Setting empty count
             CountEmpty();
         }
 
@@ -54,18 +57,24 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.BoardProcessing
         // This function returnes the presentable form of the cell's value in the given index (9 -> '9', 10 -> ':').
         public char GetPresentabeValue(int row, int column)
         {
-            return BoardTrunslator.ToMatchingChar(Grid[row, column]);
+            return BoardTranslator.ToMatchingChar(Grid[row, column]);
         }
 
+        // This function counts the empty cells on the board and sets the EmptyCount value to the counting result.
         private void CountEmpty()
         {
             EmptyCount = 0;
-            for (int i = 0; i < Side; i++)
+
+            // Iterate over each cell on the board, if it is empty, add to count.
+            for (int row = 0; row < Side; row++)
             {
-                for (int j = 0; j < Side; j++)
+                for (int column = 0; column < Side; column++)
                 {
-                    if (IsEmptyCell(j, i))
+                    // Add empty cell to count.
+                    if (IsEmptyCell(column, row))
+                    {
                         EmptyCount++;
+                    }
                 }
             }
         }

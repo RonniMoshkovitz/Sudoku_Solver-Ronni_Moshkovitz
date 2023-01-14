@@ -45,7 +45,7 @@
   <ItemGroup>
     <Compile Include="BoardProcessing\Board.cs" />
     <Compile Include="BoardProcessing\BoardProcessor.cs" />
-    <Compile Include="BoardProcessing\BoardTrunslator.cs" />
+    <Compile Include="BoardProcessing\BoardTranslator.cs" />
     <Compile Include="BoardProcessing\BoardValidator.cs" />
     <Compile Include="BoardProcessing\StringValidator.cs" />
     <Compile Include="BoardProcessing\SudokuParser.cs" />

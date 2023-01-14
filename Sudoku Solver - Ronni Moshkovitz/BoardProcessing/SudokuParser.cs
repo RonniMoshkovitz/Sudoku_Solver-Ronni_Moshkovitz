@@ -17,14 +17,14 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.BoardProcessing
         {
             int[,] grid = new int[size, size];
 
-            // Index of char in the string sudoku
+            // Index of character in the string sudoku
             int inputIndex = 0;
 
             // Row and column indexes in the grid
             for (int row = 0; row < size; row++)
                 for (int column = 0; column < size; column++, inputIndex++)
                 {
-                    grid[row, column] = BoardTrunslator.ToMatchingInt(inputSudoku[inputIndex]);
+                    grid[row, column] = BoardTranslator.ToMatchingInt(inputSudoku[inputIndex]);
                 }
 
             return grid;
@@ -42,7 +42,7 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.BoardProcessing
                 for (int column = 0; column < size; column++)
                 {
                     // Add cell to sudoku grid
-                    deParsedBoard += BoardTrunslator.ToMatchingChar(board[row, column]);
+                    deParsedBoard += BoardTranslator.ToMatchingChar(board[row, column]);
                 }
 
 

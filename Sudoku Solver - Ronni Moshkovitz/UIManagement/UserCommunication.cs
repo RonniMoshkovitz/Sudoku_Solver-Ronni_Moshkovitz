@@ -54,7 +54,7 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.UIManagement
             // Set file path to the solutions file (matches the input file, but with a "-solved.txt" ending.
             writer.FilePath = FilePath.Replace(".", "-solved."); ;
 
-            // info contains the input string to write. if writing fails, it will contain the reasson for it (an error message).
+            // Info contains the input string to write. If writing fails, it will contain the reasson for it (an error message).
             if (!writer.ControlledAccess(ref info))
             {
                 _output.Write(info);
