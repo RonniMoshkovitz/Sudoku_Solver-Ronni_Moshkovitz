@@ -37,10 +37,11 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.SudokuHandling
         private const char HORIZONTAL_LINE = '─';
         private const char VERTICAL_LINE = '│';
 
-        // Constructor for the BoardDisplay
+        // Constructor for the BoardDisplay. 
         internal BoardDisplay(Board board)
         {
             _board = board;
+
             // Creates the starting display.
             StartBoard = CreateDisplay();
         }
@@ -58,7 +59,9 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.SudokuHandling
 
                 // Starts the board.
                 if (i == 0)
+                {
                     AddUpperLine(ref display);
+                }
 
                 // If its the connection of two boxes (end of one and the the start of the other),
                 // Add box closer and box starter.
@@ -70,7 +73,9 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.SudokuHandling
 
                 // Add line between rows.
                 else
+                {
                     AddBetweenLine(ref display);
+                }
 
                 // Add the row with the values.
                 AddSudokuRow(ref display, i);
@@ -124,7 +129,9 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.SudokuHandling
             {
                 // For box connections add another line.
                 if (i != 0 && IsBoxEdge(i))
+                {
                     display += $"{VERTICAL_LINE}";
+                }
 
                 char cellChar = _board.GetPresentabeValue(row, i);
                 display += $"{VERTICAL_LINE} {cellChar} ";
@@ -162,15 +169,19 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.SudokuHandling
             for (int i = 0; i < _board.Side; i++)
             {
                 if (i == 0)
+                {
                     display += left;
-
+                }
                 else if (IsBoxEdge(i))
                 {
                     display += right;
                     display += left;
                 }
                 else
+                {
                     display += connection;
+                }
+
                 display += $"{HORIZONTAL_LINE}{HORIZONTAL_LINE}{HORIZONTAL_LINE}";
             }
             display += $"{right}{VERTICAL_LINE}\n";

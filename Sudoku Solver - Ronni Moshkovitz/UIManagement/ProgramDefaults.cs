@@ -109,7 +109,7 @@ Exemple:
     * You can choose your desired board size.
 ──────────────────────────────────────────────────────────────────────────────────────────────────────────────
 ";
-        // The goodBye message (shown when the user exits the program)
+        // The goodbye message (shown when the user exits the program)
         internal const string GOODBYE_MESSAGE = @"
 ──────────────────────────────────────────────────────────────────────────────────────────────────────────────
       _____ _              _                      __                   _             _   _    _     
@@ -130,7 +130,7 @@ Exemple:
 Created by: Ronni Moshkovitz
 ──────────────────────────────────────────────────────────────────────────────────────────────────────────────
 ";
-        // Menue for the program's supported commands.
+        // Menu for the program's supported commands.
         internal const string MENU = @"
 ┌────────────────────────────────────────────────────┐
 │    Menu:                                           │
@@ -141,7 +141,7 @@ Created by: Ronni Moshkovitz
 │          ≡ To EXIT: enter - exit                   │
 └────────────────────────────────────────────────────┘
 ";
-        // Menue for the 
+        // Menu for the input source options
         internal const string INPUT_SORCE_OPTIONS = @"
 ┌────────────────────────────────────────────────────┐
 │    Choose input sudoku sorce from the following:   │

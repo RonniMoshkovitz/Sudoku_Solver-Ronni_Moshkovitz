@@ -41,7 +41,7 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.BoardProcessing
                 throw new EmptyStringException();
         }
 
-        // This function Checks if the sudoku string is contains enugh charcters to define a sudoku board.
+        // This function Checks if the sudoku string is contains enough charcters to define a sudoku board.
         // may throw an exception if the given string length is not in a valid size.
         private void IsValidLength()
         {
@@ -52,11 +52,11 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.BoardProcessing
             // if is valid will be equal to boardSide
             int side = (int)Math.Pow(Math.Ceiling(boxSide), 2);
 
-            // If Longer then max supported size
+            // If Longer than max supported size
             if (side > MAX_SIDE)
                 throw new StringTooLongException(side, MAX_SIDE);
 
-            // If is missing charcters to compleat the board
+            // If is missing charcters to complete the board
             if (!IsWholeNumber(boxSide))
             {
                 int missing = side * side - _inputSudoku.Length;
@@ -80,10 +80,10 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.BoardProcessing
         // It returns true if valid, false otherwise.
         private bool IsValidChar(char cellValue)
         {
-            // last char is char in the matching value to the sudoku's side
-            char lastValue = BoardTrunslator.ToMatchingChar(_cellsInHouse);
+            // last character is character in the matching value to the sudoku's side
+            char lastValue = BoardTranslator.ToMatchingChar(_cellsInHouse);
 
-            return cellValue >= BoardTrunslator.EMPTY_CHAR && cellValue <= lastValue;
+            return cellValue >= BoardTranslator.EMPTY_CHAR && cellValue <= lastValue;
         }
 
         // This function checks if a double is a whole number or not. 
