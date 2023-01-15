@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Sudoku_Solver___Ronni_Moshkovitz.ReadingAndWriting
 {
-    // This class, TextFileWriter, inherits TextFileAccess and implements the IWriter inteface. It writes output to the file.
+    // This class, TextFileWriter, inherits TextFileAccess and implements the IWriter interface. It writes output to the file.
     internal class TextFileWriter : TextFileAccess, IWriter
     {
         // This function preforms controled access to the file, and writes to it. 

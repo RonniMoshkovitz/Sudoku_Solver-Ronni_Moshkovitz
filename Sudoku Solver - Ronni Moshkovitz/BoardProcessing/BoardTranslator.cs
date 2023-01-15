@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Sudoku_Solver___Ronni_Moshkovitz.BoardProcessing
 {
     // This class, BoardTranslator, is a Utility class.
-    // It is in charge of converting the cell's value from int to it's matching char, and so the other way.
+    // It is in charge of converting the cell's value from int to its matching char, and so the other way.
     internal static class BoardTranslator
     {
         // Empty cell character value

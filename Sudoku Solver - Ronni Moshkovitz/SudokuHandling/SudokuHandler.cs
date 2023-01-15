@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Sudoku_Solver___Ronni_Moshkovitz.SudokuHandling
 {
-    // This class SudokuHandler, is in charge of handaling all the sudoku related opperations. 
+    // This class SudokuHandler, is in charge of handling all the Sudoku related operations. 
     public class SudokuHandler
     {
         // BoardProcessor to process the entered string into a sudoku board.

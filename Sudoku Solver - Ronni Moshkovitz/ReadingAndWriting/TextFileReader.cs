@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Sudoku_Solver___Ronni_Moshkovitz.ReadingAndWriting
 {
-    // This class, TextFileReader, inherits TextFileAccess and implements the IReader inteface. It reads input from the file.
+    // This class, TextFileReader, inherits TextFileAccess and implements the IReader interface. It reads input from the file.
     public class TextFileReader : TextFileAccess, IReader
     {
         // This function preforms controled access to the file, and reads from it. 

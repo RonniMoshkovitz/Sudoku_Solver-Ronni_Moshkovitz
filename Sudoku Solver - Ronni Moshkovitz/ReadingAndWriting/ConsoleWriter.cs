@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Sudoku_Solver___Ronni_Moshkovitz.ReadingAndWriting
 {
-    // This class, ConsoleWriter implaments the IWriter inteface. It writes output to the console.
+    // This class, ConsoleWriter implements the IWriter interface. It writes output to the console.
     internal class ConsoleWriter : IWriter
     {
         // Constructor for ConsoleWriter, it enables the option to enter more then 254 charcters into the console.

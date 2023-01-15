@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sudoku_Solver___Ronni_Moshkovitz.BoardSolving
 {
-    // This class, DancingLinks, defines an object that solves an exact cover problem, represented by a four-way-linked list (dancing links layout), based on Donald E. Knuth's algorithem X.
+    // This class, DancingLinks, defines an object that solves an exact cover problem, represented by a four-way-linked list (dancing links layout), based on Donald E. Knuth's algorithm X.
     public class DancingLinks
     {
         // The header of the four-way-linked list representation of the exact cover problem.
@@ -28,7 +28,7 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.BoardSolving
             Solvable = SearchForSolution();
         }
 
-        // This function finds the first complete answer to the exact cover problem (if there is one). It is based on Donald E. Knuth's algorithem DLX (dancing links algoritem X).
+        // This function finds the first complete answer to the exact cover problem (if there is one). It is based on Donald E. Knuth's algorithm  DLX (dancing links algoritem X).
         // The main idea is to "cover" each satisfied column (a column with a 1 in it), until all columns are satisfied.
         // It returns True if a solution was found, false otherwise.
         private bool SearchForSolution(int k = 0)
