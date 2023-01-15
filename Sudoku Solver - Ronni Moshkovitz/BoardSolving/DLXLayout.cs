@@ -45,7 +45,7 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.BoardSolving
                 ColumnNode node = new ColumnNode(i.ToString());
                 columnNodes[i] = node;
 
-                // Use the header node to point to the last added column node.
+                // Use the header node to point to the last added column node, and connect it to the right.
                 headerNode = (ColumnNode)headerNode.ConnectRight(node);
             }
             // Return the header node to point to the header node.
