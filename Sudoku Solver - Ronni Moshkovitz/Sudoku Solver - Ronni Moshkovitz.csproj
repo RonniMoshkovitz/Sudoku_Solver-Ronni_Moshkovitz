@@ -43,19 +43,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Board.cs" />
-    <Compile Include="BoardDisplay.cs" />
-    <Compile Include="Cell.cs" />
-    <Compile Include="InputValidator.cs" />
-    <Compile Include="ITechnique.cs" />
+    <Compile Include="BoardProcessing\Board.cs" />
+    <Compile Include="BoardProcessing\BoardProcessor.cs" />
+    <Compile Include="BoardProcessing\BoardTranslator.cs" />
+    <Compile Include="BoardProcessing\BoardValidator.cs" />
+    <Compile Include="BoardProcessing\StringValidator.cs" />
+    <Compile Include="BoardProcessing\SudokuParser.cs" />
+    <Compile Include="BoardSolving\CoverMatrix.cs" />
+    <Compile Include="BoardSolving\DancingLinks.cs" />
+    <Compile Include="BoardSolving\DLXLayout.cs" />
+    <Compile Include="BoardSolving\Nodes.cs" />
+    <Compile Include="BoardSolving\SolutionHandler.cs" />
+    <Compile Include="BoardSolving\SudokuSolver.cs" />
+    <Compile Include="Exceptions\IllegalBoardException.cs" />
+    <Compile Include="Exceptions\InvalidSudokuStringException.cs" />
+    <Compile Include="Exceptions\TextFilePathException.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SudokuParser.cs" />
-    <Compile Include="SudokuSolver.cs" />
-    <Compile Include="SudokuValidator.cs" />
+    <Compile Include="ReadingAndWriting\ConsoleReader.cs" />
+    <Compile Include="ReadingAndWriting\ConsoleWriter.cs" />
+    <Compile Include="ReadingAndWriting\IReader.cs" />
+    <Compile Include="ReadingAndWriting\IWriter.cs" />
+    <Compile Include="ReadingAndWriting\TextFileAccess.cs" />
+    <Compile Include="ReadingAndWriting\TextFileReader.cs" />
+    <Compile Include="ReadingAndWriting\TextFileWriter.cs" />
+    <Compile Include="SudokuHandling\BoardDisplay.cs" />
+    <Compile Include="SudokuHandling\SudokuHandler.cs" />
+    <Compile Include="SudokuHandling\Timer.cs" />
+    <Compile Include="UIManagement\MenuActions.cs" />
+    <Compile Include="UIManagement\MenuSelections.cs" />
+    <Compile Include="UIManagement\ProgramDefaults.cs" />
+    <Compile Include="UIManagement\UserCommunication.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
