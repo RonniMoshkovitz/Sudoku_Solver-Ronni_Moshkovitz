@@ -377,7 +377,7 @@ The solving process can end in one of two ways:
 1. All the columns are removed but the header node. In this case a solution was found, all columns are satisfied.
 2. Tried all possible rows and all lead to a dead end, there is no solution to the problem.
 
-###Complete the sudoku
+### Complete the sudoku
 After solving the Sudoku Exact Cover Problem, we get a set of options that represent one solution to the exact cover problem.
 This solution includes all the cells on the board and their values (including both empty and filled cells). To solve the Sudoku, we will translate each row from the solution set back to a the cell index, and the cell value. We will then place each cell result on the Sudoku board, until the Sudoku is finished.
 
