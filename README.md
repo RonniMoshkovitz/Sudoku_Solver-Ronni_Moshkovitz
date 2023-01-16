@@ -4,13 +4,17 @@
 
 The code is written in C# (.NET 7.0), and the sudoku solving is implemented using Dr. Donald Knuth’s Dancing Links Algorithm.
 
+## README Menu:
+**[The Sudoku Rules](https://github.com/RonniMoshkovitz/Sudoku_Solver-Ronni_Moshkovitz/edit/dev/README.md#sudoku-puzzle-rules)**
 
-## The program
-This program solves Sudoku boards in different sizes. It currently supports boards in sizes 1x1 to 25x25.
-To enter a board, you can choose from two different sources. You can either choose Console; and enter a Sudoku string directly into the console, or you can choose Text file; and enter a path to a txt file with a Sudoku string in it.
-The rest of the user communication is done through the console.
+**[The Program](https://github.com/RonniMoshkovitz/Sudoku_Solver-Ronni_Moshkovitz/edit/dev/README.md#the-program)**
 
-### Sudoku Puzzle Rules
+**[The Code](https://github.com/RonniMoshkovitz/Sudoku_Solver-Ronni_Moshkovitz/edit/dev/README.md#the-code-behind-the-sudoku-solver)**
+
+**[The Solving Algorithm](https://github.com/RonniMoshkovitz/Sudoku_Solver-Ronni_Moshkovitz/edit/dev/README.md#the-solving-algorithm--dancing-links)**
+
+
+## Sudoku Puzzle Rules
 A sudoku puzzle is a logic-based value placement puzzle.
 The goal is to solve the puzzle by filling an NxN grid with values from 1 to N in such a way that each house (row, column, or box) contains all of the values from 1 to N without repetition. The puzzle typically starts with some values already filled in as clues, and the player must use logic to determine the correct placement of the remaining numbers.
 
@@ -36,14 +40,47 @@ There are 3 types of houses:
 These are all the houses of the cell in index (0,0) on the board from the next example.
 
 
-### Example for a Sudoku string input
+#### Example for a Sudoku string
 The string: 100000027000304015500170683430962001900007256006810000040600030012043500058001000
 Represents the board:
 
 <img width="267" alt="image" src="https://user-images.githubusercontent.com/117098162/212572696-565f9895-a69d-4b47-be3f-5df3f7ea8ee3.png">
 * A sudoku with size 9x9
 
-### Program commands
+## The program
+This program solves Sudoku boards in different sizes. It currently supports boards in sizes 1x1 to 25x25.
+To enter a board, you can choose from two different sources. You can either choose Console; and enter a Sudoku string directly into the console, or you can choose Text file; and enter a path to a txt file with a Sudoku string in it.
+The rest of the user communication is done through the console.
+
+### Using the soduko solver program
+#### Running the program
+To run the sudoku solver program you first have to clone the repository to your local computer. Then open the ``Sudoku Solver - Ronni Moshkovitz.sln`` file in Visual Studio 2022, and run it. **make sure you are using .NET 7.0**.
+
+
+#### Program usage
+Starting the program will show the following:
+```
+     __        __   _ _                            _          _   _          
+     \ \      / /__| | | ___ ___  _ __ ___   ___  | |_ ___   | |_| |__   ___ 
+      \ \ /\ / / _ \ | |/ __/ _ \| '_ ` _ \ / _ \ | __/ _ \  | __| '_ \ / _ \
+       \ V  V /  __/ | | (_| (_) | | | | | |  __/ | || (_) | | |_| | | |  __/
+        \_/\_/ \___|_|_|\___\___/|_| |_| |_|\___|  \__\___/   \__|_| |_|\___|
+        ___  __  __ _____ ____    _      ____  _   _ ____   ___  _  ___   _   
+       / _ \|  \/  | ____/ ___|  / \    / ___|| | | |  _ \ / _ \| |/ / | | |  
+      | | | | |\/| |  _|| |  _  / _ \   \___ \| | | | | | | | | | ' /| | | |  
+      | |_| | |  | | |__| |_| |/ ___ \   ___) | |_| | |_| | |_| | . \| |_| |  
+       \___/|_|  |_|_____\____/_/   \_\ |____/ \___/|____/ \___/|_|\_\\___/   
+                      ____   ___  _ __     _______ ____                                      
+                     / ___| / _ \| |\ \   / / ____|  _ \                                     
+                     \___ \| | | | | \ \ / /|  _| | |_) |                                    
+                      ___) | |_| | |__\ V / | |___|  _ <                                     
+                     |____/ \___/|_____\_/  |_____|_| \_\    
+
+This solver gets a sudoku string that represent all the cells of the sudoku board, and solves it for you!.
+```
+along with the rules and an example.
+
+Every round before starting a new action, the next menu will appear:
 ```
 ≡ To view rules: enter - rules
 
@@ -52,6 +89,169 @@ Represents the board:
 ≡ To view example: enter - example 
 
 ≡ To EXIT: enter - exit
+```
+
+**Choosing rules:** will display the sudoku rules
+```
+    In the Sudoku puzzle each cell has 3 houses.
+    There are 3 types of houses:
+     ≡ Row:
+        ┌───┬───┬───┐┌───┬───┬───┐┌───┬───┬───┐
+        │ 1 │ 0 │ 0 ││ 0 │ 0 │ 0 ││ 0 │ 2 │ 7 │
+        └───┴───┴───┘└───┴───┴───┘└───┴───┴───┘
+     ≡ Column: 
+        ┌───┐
+        │ 1 │
+        ├───┤
+        │ 0 │
+        ├───┤
+        │ 5 │
+        └───┘
+        ┌───┐
+        │ 4 │
+        ├───┤
+        │ 9 │
+        ├───┤
+        │ 0 │
+        └───┘
+        ┌───┐
+        │ 0 │
+        ├───┤
+        │ 0 │
+        ├───┤
+        │ 0 │ 
+        └───┘
+     ≡ Box:
+        ┌───┬───┬───┐
+        │ 1 │ 0 │ 0 │
+        ├───┼───┼───┤
+        │ 0 │ 0 │ 0 │
+        ├───┼───┼───┤
+        │ 5 │ 0 │ 0 │
+        └───┴───┴───┘
+    The main goal is to fill in all the empty cells and compleate the board.
+
+    BUT, There is only one rule for the sudoku puzzle.
+    Eeach value can only appear ONCE in a house.
+```
+**Choosing example:** will show the following example
+```
+Exemple:
+    The string:
+    100000027000304015500170683430962001900007256006810000040600030012043500058001000
+    Represents the board:
+        ┌───────────────────────────────────────┐
+        │┌───┬───┬───┐┌───┬───┬───┐┌───┬───┬───┐│
+        ││ 1 │ 0 │ 0 ││ 0 │ 0 │ 0 ││ 0 │ 2 │ 7 ││
+        │├───┼───┼───┤├───┼───┼───┤├───┼───┼───┤│
+        ││ 0 │ 0 │ 0 ││ 3 │ 0 │ 4 ││ 0 │ 1 │ 5 ││
+        │├───┼───┼───┤├───┼───┼───┤├───┼───┼───┤│
+        ││ 5 │ 0 │ 0 ││ 1 │ 7 │ 0 ││ 6 │ 8 │ 3 ││
+        │└───┴───┴───┘└───┴───┴───┘└───┴───┴───┘│
+        │┌───┬───┬───┐┌───┬───┬───┐┌───┬───┬───┐│
+        ││ 4 │ 3 │ 0 ││ 9 │ 6 │ 2 ││ 0 │ 0 │ 1 ││
+        │├───┼───┼───┤├───┼───┼───┤├───┼───┼───┤│
+        ││ 9 │ 0 │ 0 ││ 0 │ 0 │ 7 ││ 2 │ 5 │ 6 ││
+        │├───┼───┼───┤├───┼───┼───┤├───┼───┼───┤│
+        ││ 0 │ 0 │ 6 ││ 8 │ 1 │ 0 ││ 0 │ 0 │ 0 ││
+        │└───┴───┴───┘└───┴───┴───┘└───┴───┴───┘│
+        │┌───┬───┬───┐┌───┬───┬───┐┌───┬───┬───┐│
+        ││ 0 │ 4 │ 0 ││ 6 │ 0 │ 0 ││ 0 │ 3 │ 0 ││
+        │├───┼───┼───┤├───┼───┼───┤├───┼───┼───┤│
+        ││ 0 │ 1 │ 2 ││ 0 │ 4 │ 3 ││ 5 │ 0 │ 0 ││
+        │├───┼───┼───┤├───┼───┼───┤├───┼───┼───┤│
+        ││ 0 │ 5 │ 8 ││ 0 │ 0 │ 1 ││ 0 │ 0 │ 0 ││
+        │└───┴───┴───┘└───┴───┴───┘└───┴───┴───┘│
+        └───────────────────────────────────────┘
+    * You can choose your desired board size.
+```
+**Choosing solve:** will ask you for an input source
+```
+┌────────────────────────────────────────────────────┐
+│    Choose input sudoku sorce from the following:   │
+│        ≡ To read from file: enter - file           │
+│        ≡ To read from console: enter - console     │
+└────────────────────────────────────────────────────┘
+```
+After choosing file, the program will ask for a file path to a txt file with a Sudoku string in it.
+
+After choosing console, the program will ask for a Sudoku string.
+
+**After entering the Sudoku string:** the solver will display the given Sudoku in a clean Sudoku display, and then solve it. After that the program will present the solved Sudoku's display, the solved Sudoku string, and the time that it took to solve the Sudoku ( in milisecounds).
+
+output example for the string 100000027000304015500170683430962001900007256006810000040600030012043500058001000:
+```
+┌───────────────────────────────────────┐
+│┌───┬───┬───┐┌───┬───┬───┐┌───┬───┬───┐│
+││ 1 │ 0 │ 0 ││ 0 │ 0 │ 0 ││ 0 │ 2 │ 7 ││
+│├───┼───┼───┤├───┼───┼───┤├───┼───┼───┤│
+││ 0 │ 0 │ 0 ││ 3 │ 0 │ 4 ││ 0 │ 1 │ 5 ││
+│├───┼───┼───┤├───┼───┼───┤├───┼───┼───┤│
+││ 5 │ 0 │ 0 ││ 1 │ 7 │ 0 ││ 6 │ 8 │ 3 ││
+│└───┴───┴───┘└───┴───┴───┘└───┴───┴───┘│
+│┌───┬───┬───┐┌───┬───┬───┐┌───┬───┬───┐│
+││ 4 │ 3 │ 0 ││ 9 │ 6 │ 2 ││ 0 │ 0 │ 1 ││
+│├───┼───┼───┤├───┼───┼───┤├───┼───┼───┤│
+││ 9 │ 0 │ 0 ││ 0 │ 0 │ 7 ││ 2 │ 5 │ 6 ││
+│├───┼───┼───┤├───┼───┼───┤├───┼───┼───┤│
+││ 0 │ 0 │ 6 ││ 8 │ 1 │ 0 ││ 0 │ 0 │ 0 ││
+│└───┴───┴───┘└───┴───┴───┘└───┴───┴───┘│
+│┌───┬───┬───┐┌───┬───┬───┐┌───┬───┬───┐│
+││ 0 │ 4 │ 0 ││ 6 │ 0 │ 0 ││ 0 │ 3 │ 0 ││
+│├───┼───┼───┤├───┼───┼───┤├───┼───┼───┤│
+││ 0 │ 1 │ 2 ││ 0 │ 4 │ 3 ││ 5 │ 0 │ 0 ││
+│├───┼───┼───┤├───┼───┼───┤├───┼───┼───┤│
+││ 0 │ 5 │ 8 ││ 0 │ 0 │ 1 ││ 0 │ 0 │ 0 ││
+│└───┴───┴───┘└───┴───┴───┘└───┴───┴───┘│
+└───────────────────────────────────────┘
+
+Solved:
+┌───────────────────────────────────────┐
+│┌───┬───┬───┐┌───┬───┬───┐┌───┬───┬───┐│
+││ 1 │ 9 │ 3 ││ 5 │ 8 │ 6 ││ 4 │ 2 │ 7 ││
+│├───┼───┼───┤├───┼───┼───┤├───┼───┼───┤│
+││ 8 │ 6 │ 7 ││ 3 │ 2 │ 4 ││ 9 │ 1 │ 5 ││
+│├───┼───┼───┤├───┼───┼───┤├───┼───┼───┤│
+││ 5 │ 2 │ 4 ││ 1 │ 7 │ 9 ││ 6 │ 8 │ 3 ││
+│└───┴───┴───┘└───┴───┴───┘└───┴───┴───┘│
+│┌───┬───┬───┐┌───┬───┬───┐┌───┬───┬───┐│
+││ 4 │ 3 │ 5 ││ 9 │ 6 │ 2 ││ 8 │ 7 │ 1 ││
+│├───┼───┼───┤├───┼───┼───┤├───┼───┼───┤│
+││ 9 │ 8 │ 1 ││ 4 │ 3 │ 7 ││ 2 │ 5 │ 6 ││
+│├───┼───┼───┤├───┼───┼───┤├───┼───┼───┤│
+││ 2 │ 7 │ 6 ││ 8 │ 1 │ 5 ││ 3 │ 4 │ 9 ││
+│└───┴───┴───┘└───┴───┴───┘└───┴───┴───┘│
+│┌───┬───┬───┐┌───┬───┬───┐┌───┬───┬───┐│
+││ 7 │ 4 │ 9 ││ 6 │ 5 │ 8 ││ 1 │ 3 │ 2 ││
+│├───┼───┼───┤├───┼───┼───┤├───┼───┼───┤│
+││ 6 │ 1 │ 2 ││ 7 │ 4 │ 3 ││ 5 │ 9 │ 8 ││
+│├───┼───┼───┤├───┼───┼───┤├───┼───┼───┤│
+││ 3 │ 5 │ 8 ││ 2 │ 9 │ 1 ││ 7 │ 6 │ 4 ││
+│└───┴───┴───┘└───┴───┴───┘└───┴───┴───┘│
+└───────────────────────────────────────┘
+
+Took: 1.1451 milisecounds
+
+Solved Sudoku string: 193586427867324915524179683435962871981437256276815349749658132612743598358291764
+```
+**Choosing exit:** will show the following and then terminate the program
+```
+      _____ _              _                      __                   _             _   _    _     
+     |_   _| |_  __ _ _ _ | |__  _  _ ___ _  _   / _|___ _ _   _  _ __(_)_ _  __ _  | |_| |_ (_)___ 
+       | | | ' \/ _` | ' \| / / | || / _ \ || | |  _/ _ \ '_| | || (_-< | ' \/ _` | |  _| ' \| (_-< 
+       |_| |_||_\__,_|_||_|_\_\  \_, \___/\_,_| |_| \___/_|    \_,_/__/_|_||_\__, |  \__|_||_|_/__/ 
+                   ___ _   _ ___ |__/_  _  ___   _   ___  ___  _ __   _____ _|___/                  
+                  / __| | | |   \ / _ \| |/ / | | | / __|/ _ \| |\ \ / / __| _ \ |                  
+                  \__ \ |_| | |) | (_) | ' <| |_| | \__ \ (_) | |_\ V /| _||   /_|                  
+                  |___/\___/|___/ \___/|_|\_\\___/  |___/\___/|____\_/ |___|_|_(_)  
+                    
+                                                         _     _   _                 
+              ___ ___ ___   _  _ ___ _  _   _ _  _____ _| |_  | |_(_)_ __  ___       
+             (_-</ -_) -_) | || / _ \ || | | ' \/ -_) \ /  _| |  _| | '  \/ -_)_ _ _ 
+             /__/\___\___|  \_, \___/\_,_| |_||_\___/_\_\\__|  \__|_|_|_|_\___(_|_|_)
+                            |__/ 
+
+Created by: Ronni Moshkovitz
 ```
 
 ## The code behind the Sudoku solver
@@ -66,7 +266,8 @@ Represents the board:
 
 ### BoardProcessing:
 
-This package includes all the processing related classes. These classes validate the sudoku string, validate it, parse it into a board, and check that the board doesn't contradict the Sudoku rules.
+This package includes all the processing related classes. These classes validate the Sudoku string, validate it, parse it into a board, and check that the board doesn't contradict the Sudoku rules.
+
 
 **Classes:**
 
@@ -76,6 +277,7 @@ This package includes all the processing related classes. These classes validate
 - SudokuParser
 - BoardValidator
 - BoardProcessor
+
 
 **Board:**
 
