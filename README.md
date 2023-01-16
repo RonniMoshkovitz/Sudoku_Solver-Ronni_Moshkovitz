@@ -2,8 +2,6 @@
 
 ###### This project is an OMEGA Sudoku solver. It gets a string representation of a Sudoku board and solves it rapidly.
 
-[TOCM]
-
 ## The program
 This program solves Sudoku boards in different sizes. It currently supports boards in sizes 1x1 to 25x25.
 To enter a board, you can choose from two different sources. You can either choose Console; and enter a Sudoku string directly into the console. Or you can choose Text file; and enter a path to a txt file with a Sudoku string in it.
@@ -12,13 +10,16 @@ The rest of the user communication is done through the console.
 ### Sudoku Puzzle Rules
 In the Sudoku puzzle each cell has 3 houses.
 There are 3 types of houses:
+
 ≡ Row:
 
 <img width="235" alt="image" src="https://user-images.githubusercontent.com/117098162/212574748-f006ecb7-f205-4153-a7e7-8fa05b9c1903.png">
 
+
 ≡ Column:
 
 <img width="32" alt="image" src="https://user-images.githubusercontent.com/117098162/212574914-15a8fd00-841a-45f9-81f5-5c06a8691d1a.png">
+
 
 ≡ Box:
 
@@ -339,17 +340,17 @@ Row constraint – row 0, value 2 (second option)
 
 Column constraint – column 3, value 2 (second option)
 
-| 32 | 33 | 34 | 35 | 36 | 37 | 38 | 39 | 40 | 41 | 42 | 44 | 45 | 46 | 47 | 48 |
+| 32 | 33 | 34 | 35 | 36 | 37 | 38 | 39 | 40 | 41 | 42 | 43 | 44 | 45 | 46 | 47 |
 | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
-| 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | **0** | **1** | ** 0** |** 0** |
+| 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | **0** | **1** | **0** |**0** |
 
 *we skipped 12 cells that belong to columns 0-2
 
 Box constraint – box 1, value 2 (second option) 
 
-| 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 |
+| 48 | 49 | 50 | 51 | 52 | 53 | 54 | 55 | 56 | 57 | 58 | 59 | 60 | 61 | 62 | 63 |
 | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
-| 0 | 0 | 0 | 0 | **0** |  **1** |** 0 **| **0** | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 0 | 0 | 0 | 0 | **0** | **1** | **0** | **0** | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 
 *we skipped 4 cells that belong to column 0
 
