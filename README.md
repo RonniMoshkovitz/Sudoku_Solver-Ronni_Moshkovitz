@@ -5,13 +5,13 @@
 The code is written in C# (.NET 7.0), and the sudoku solving is implemented using Dr. Donald Knuth’s Dancing Links Algorithm.
 
 ## README Menu:
-**[The Sudoku Rules](https://github.com/RonniMoshkovitz/Sudoku_Solver-Ronni_Moshkovitz/edit/dev/README.md#sudoku-puzzle-rules)**
+**[The Sudoku Rules](README.md#sudoku-puzzle-rules)**
 
-**[The Program](https://github.com/RonniMoshkovitz/Sudoku_Solver-Ronni_Moshkovitz/edit/dev/README.md#the-program)**
+**[The Program](README.md#the-program)**
 
-**[The Code](https://github.com/RonniMoshkovitz/Sudoku_Solver-Ronni_Moshkovitz/edit/dev/README.md#the-code-behind-the-sudoku-solver)**
+**[The Code](README.md#the-code-behind-the-sudoku-solver)**
 
-**[The Solving Algorithm](https://github.com/RonniMoshkovitz/Sudoku_Solver-Ronni_Moshkovitz/edit/dev/README.md#the-solving-algorithm--dancing-links)**
+**[The Solving Algorithm](README.md#the-solving-algorithm--dancing-links)**
 
 
 ## Sudoku Puzzle Rules
