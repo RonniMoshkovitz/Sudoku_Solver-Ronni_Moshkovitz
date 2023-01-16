@@ -1,9 +1,6 @@
 ﻿using Sudoku_Solver___Ronni_Moshkovitz.BoardProcessing;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Sudoku_Solver___Ronni_Moshkovitz.BoardSolving
 {
@@ -60,6 +57,7 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.BoardSolving
 
                 // Separate cell value from the row num restriction.
                 int cellValue = cellValueWithRowNum % side + 1;
+
                 // Place cell on board
                 board[row, col] = cellValue;
 

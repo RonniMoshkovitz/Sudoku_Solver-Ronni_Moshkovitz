@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace Sudoku_Solver___Ronni_Moshkovitz.BoardSolving
 {
     // This class defines a node for a four-way-linked DLX layout.
@@ -31,6 +26,7 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.BoardSolving
             // Point to the node under the current and get pointed back. 
             downNode.Down = this.Down;
             downNode.Down.Up = downNode;
+
             // Point to the current node (new up) and get pointed back. 
             downNode.Up = this;
             this.Down = downNode;
@@ -44,6 +40,7 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.BoardSolving
             // Point to the node to the right of the current and get pointed back. 
             rightNode.Right = this.Right;
             rightNode.Right.Left = rightNode;
+
             // Point to the current node (new left) and get pointed back. 
             rightNode.Left = this;
             this.Right = rightNode;
@@ -80,6 +77,7 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.BoardSolving
             this.Up.Down = this.Down.Up = this;
         }
     }
+
 
 
     // This class, ColumnNode, defines a column node for a four-way-linked DLX layout.
@@ -122,16 +120,16 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.BoardSolving
         internal void Uncover()
         {
             // For each node in the covered column, uncover the whole option (all its side linked nodes).
-            for (DancingNode i = this.Up; i != this; i = i.Up)
+            for (DancingNode colPart = this.Up; colPart != this; colPart = colPart.Up)
             {
-                for (DancingNode j = i.Left; j != i; j = j.Left)
+                for (DancingNode optionPart = colPart.Left; optionPart != colPart; optionPart = optionPart.Left)
                 {
                     // Relink nodes to their columns (to the nodes above and below), as part of an option in the coverd column.
-                    j.ColumnNode.Size++;
-                    j.RelinkUpDown();
+                    optionPart.ColumnNode.Size++;
+                    optionPart.RelinkUpDown();
                 }
             }
-            // Relink the satisfied column node from the layout.
+            // Relink the satisfied column node to the layout.
             RelinkLeftRight();
         }
     }

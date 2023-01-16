@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Sudoku_Solver___Ronni_Moshkovitz.Exceptions
 {
@@ -12,7 +9,7 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.Exceptions
         public InvalidSudokuStringException(string message) : base($"Invalid Sudoku string: {message}.") { }
     }
 
-    // This Exception is an exception for when the given sudoku string is invalid due to an appearence of a character (value) that is out of the range of the sudoku board's values.
+    // This Exception is an exception for when the given sudoku string is invalid due to an appearance of a character (value) that is out of the range of the sudoku board's values.
     public class UnsupportedValueException : InvalidSudokuStringException
     {
         public UnsupportedValueException(char value) : base($"Unsupported value: \"{value}\" in the given sudoku string (out of range)") { }

@@ -1,22 +1,18 @@
 ﻿using Sudoku_Solver___Ronni_Moshkovitz.BoardProcessing;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Sudoku_Solver___Ronni_Moshkovitz.BoardSolving
 {
     // This class, CoverMatrix, defines an object that creates an exact cover matrix for a given board.
     internal class CoverMatrix
     {
-        // There are 4 constraints for a sudoku puzzle (cell, row, column, box)
+        // There are 4 constraints for a sudoku puzzle (cell, row, column, box).
         private const int CONSTRAINTS = 4;
 
-        // Sudoku board dimensions
+        // Sudoku board dimensions.
         private int _side, _boxSide, _boardSize;
 
-        // Exact cover matrix that is generated to match the sudoku (describes the sudoku board as an exact cover problem)
+        // Exact cover matrix that is generated to match the sudoku (describes the sudoku board as an exact cover problem).
         private byte[,] _cover;
 
         // This function sets all the required dimension for the creation of the board's exact cover matrix.

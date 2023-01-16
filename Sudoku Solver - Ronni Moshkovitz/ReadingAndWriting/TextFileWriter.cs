@@ -1,15 +1,12 @@
 ﻿using Sudoku_Solver___Ronni_Moshkovitz.Exceptions;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Sudoku_Solver___Ronni_Moshkovitz.ReadingAndWriting
 {
-    // This class, TextFileWriter, inherits TextFileAccess and implements the IWriter inteface. It writes output to the file.
-    internal class TextFileWriter : TextFileAccess, IWriter
+    // This class, TextFileWriter, inherits TextFileAccess and implements the IWriter interface. It writes output to the file.
+    public class TextFileWriter : TextFileAccess, IWriter
     {
         // This function preforms controled access to the file, and writes to it. 
         // It insetrs to data the error message if writting is impossible.

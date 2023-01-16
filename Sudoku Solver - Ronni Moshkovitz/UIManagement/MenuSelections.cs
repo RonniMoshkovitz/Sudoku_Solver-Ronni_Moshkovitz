@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Sudoku_Solver___Ronni_Moshkovitz.UIManagement
 {
-    // This class, MenuSelections, is in charge of directing the program according to a given setection string.
+    // This class, MenuSelections, is in charge of directing the program according to a given selection string..
     internal class MenuSelections
     {
         // The main menu.

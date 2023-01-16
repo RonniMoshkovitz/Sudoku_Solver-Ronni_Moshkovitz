@@ -1,14 +1,10 @@
 ﻿using Sudoku_Solver___Ronni_Moshkovitz.BoardProcessing;
 using Sudoku_Solver___Ronni_Moshkovitz.BoardSolving;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Sudoku_Solver___Ronni_Moshkovitz.SudokuHandling
 {
-    // This class SudokuHandler, is in charge of handaling all the sudoku related opperations. 
+    // This class SudokuHandler, is in charge of handling all the Sudoku related operations. 
     public class SudokuHandler
     {
         // BoardProcessor to process the entered string into a sudoku board.
@@ -22,6 +18,7 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.SudokuHandling
 
         // BoardDisplay to create the display for the sudoku board.
         private BoardDisplay _boardDisplay;
+
         // The board to handle.
         private Board _board;
 

@@ -1,9 +1,6 @@
 ﻿using Sudoku_Solver___Ronni_Moshkovitz.BoardProcessing;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Sudoku_Solver___Ronni_Moshkovitz.SudokuHandling
 {
@@ -162,28 +159,33 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.SudokuHandling
         // This function adds a line in the grid according to the left char, right char, and the connection char.
         private void AddLine(ref string display, char left, char right, char connection)
         {
-            // Add line for the outer border
+            // Add line for the outer border.
             display += VERTICAL_LINE;
 
             // Create the line.
             for (int i = 0; i < _board.Side; i++)
             {
+                // Add start of line char.
                 if (i == 0)
                 {
                     display += left;
                 }
+
+                // Add end of box and start of new box char.
                 else if (IsBoxEdge(i))
                 {
                     display += right;
                     display += left;
                 }
+                // Add connection char.
                 else
                 {
                     display += connection;
                 }
-
+                // Add cell line (top or buttom of the cell frame).
                 display += $"{HORIZONTAL_LINE}{HORIZONTAL_LINE}{HORIZONTAL_LINE}";
             }
+            // Finish line.
             display += $"{right}{VERTICAL_LINE}\n";
         }
 

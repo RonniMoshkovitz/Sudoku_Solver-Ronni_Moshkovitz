@@ -1,18 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+
 
 namespace Sudoku_Solver___Ronni_Moshkovitz.BoardSolving
 {
-    // This class, DancingLinks, defines an object that solves an exact cover problem, represented by a four-way-linked list (dancing links layout), based on Donald E. Knuth's algorithem X.
-    public class DancingLinks
+    // This class, DancingLinks, defines an object that solves an exact cover problem, represented by a four-way-linked list (dancing links layout), based on Donald E. Knuth's algorithm X.
+    internal class DancingLinks
     {
         // The header of the four-way-linked list representation of the exact cover problem.
         private ColumnNode _header;
 
-        // Stack with the answer parts to the problem (the "rows" that were selected)
+        // Stack with the answer parts to the problem (the "rows" that were selected).
         internal Stack<DancingNode> Answer { get; private set; }
 
         // Says if the exact cover problem has a solution or not.
@@ -28,7 +25,7 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.BoardSolving
             Solvable = SearchForSolution();
         }
 
-        // This function finds the first complete answer to the exact cover problem (if there is one). It is based on Donald E. Knuth's algorithem DLX (dancing links algoritem X).
+        // This function finds the first complete answer to the exact cover problem (if there is one). It is based on Donald E. Knuth's algorithm  DLX (dancing links algoritem X).
         // The main idea is to "cover" each satisfied column (a column with a 1 in it), until all columns are satisfied.
         // It returns True if a solution was found, false otherwise.
         private bool SearchForSolution(int k = 0)
@@ -45,10 +42,10 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.BoardSolving
                 ColumnNode currentColumn = SelectColumnWithLeastOptions();
                 currentColumn.Cover();
 
-                // Try all options to satisfy this column
+                // Try all options to satisfy this column.
                 for (DancingNode OptionStart = currentColumn.Down; OptionStart != currentColumn; OptionStart = OptionStart.Down)
                 {
-                    // Add option to answers
+                    // Add option to answers.
                     Answer.Push(OptionStart);
 
                     // Cover all related options.
@@ -63,7 +60,7 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.BoardSolving
                         return true;
                     }
 
-                    // Assumption was wrong, remove from answer stack
+                    // Assumption was wrong, remove from answer stack.
                     OptionStart = Answer.Pop();
                     currentColumn = OptionStart.ColumnNode;
 

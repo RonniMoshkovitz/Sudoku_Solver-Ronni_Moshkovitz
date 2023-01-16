@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.IO;
+
 
 namespace Sudoku_Solver___Ronni_Moshkovitz.Exceptions
 {
@@ -13,7 +9,7 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.Exceptions
         public TextFilePathException(string message) : base(message) { }
     }
 
-    // This Exception is an exception for when the given file path is emmpty.
+    // This Exception is an exception for when the given file path is empty.
     public class EmptyPathException : TextFilePathException
     {
         public EmptyPathException() : base($"No path was entered") { }

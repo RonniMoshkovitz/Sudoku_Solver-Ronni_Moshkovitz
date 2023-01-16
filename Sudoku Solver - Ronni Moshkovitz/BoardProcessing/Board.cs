@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Sudoku_Solver___Ronni_Moshkovitz.BoardProcessing
 {
@@ -11,20 +8,20 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.BoardProcessing
     // All cells with values contain a value between 1 to the board's side length.
     public class Board
     {
-        // Defined values
+        // Defined values.
         private const int EMPTY_VALUE = 0;
         public readonly int FirstValue = 1;
 
-        // Board leyput grid
+        // Board leyput grid.
         internal readonly int[,] Grid;
 
         // Empty cells count.
         internal int EmptyCount;
 
-        // Board side length
+        // Board side length.
         public int Side { get; }
 
-        // Box side length
+        // Box side length.
         public int BoxSide { get; }
 
         // Indexer for the Board object.
@@ -40,11 +37,11 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.BoardProcessing
         {
             Grid = layout;
 
-            // Setting dimensions
+            // Setting dimensions.
             Side = boardSide;
             BoxSide = (int)Math.Sqrt(Side);
 
-            // Setting empty count
+            // Setting empty count.
             CountEmpty();
         }
 

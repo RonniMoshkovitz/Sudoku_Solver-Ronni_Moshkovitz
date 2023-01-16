@@ -1,9 +1,6 @@
 ﻿using Sudoku_Solver___Ronni_Moshkovitz.Exceptions;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Sudoku_Solver___Ronni_Moshkovitz.BoardProcessing
 {
@@ -38,7 +35,9 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.BoardProcessing
         private void IsEmpty()
         {
             if (string.IsNullOrEmpty(_inputSudoku))
+            {
                 throw new EmptyStringException();
+            }
         }
 
         // This function Checks if the sudoku string is contains enough charcters to define a sudoku board.
@@ -54,7 +53,9 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.BoardProcessing
 
             // If Longer than max supported size
             if (side > MAX_SIDE)
+            {
                 throw new StringTooLongException(side, MAX_SIDE);
+            }
 
             // If is missing charcters to complete the board
             if (!IsWholeNumber(boxSide))
@@ -72,8 +73,12 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.BoardProcessing
         private void AreValidChars()
         {
             foreach (char cellValue in _inputSudoku)
+            {
                 if (!IsValidChar(cellValue))
+                {
                     throw new UnsupportedValueException(cellValue);
+                }
+            }
         }
 
         // This function Checks if a certain charcter is valid.
