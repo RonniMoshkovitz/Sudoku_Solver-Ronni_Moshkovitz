@@ -1,9 +1,5 @@
 ﻿using Sudoku_Solver___Ronni_Moshkovitz.Exceptions;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Sudoku_Solver___Ronni_Moshkovitz.ReadingAndWriting
 {
@@ -23,8 +19,8 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.ReadingAndWriting
             if (string.IsNullOrEmpty(FilePath))
                 throw new EmptyPathException();
 
-            // Check if the file path is in the right format.
-            if (!FilePath.EndsWith(TXT_FORMAT))
+            // Check if the file path is in the right format (ignore case).
+            if (!FilePath.EndsWith(TXT_FORMAT, StringComparison.OrdinalIgnoreCase))
                 throw new WrongFormatException(FilePath);
         }
 

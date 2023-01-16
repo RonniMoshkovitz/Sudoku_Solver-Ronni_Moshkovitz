@@ -1,11 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Sudoku_Solver___Ronni_Moshkovitz.Exceptions;
 using Sudoku_Solver___Ronni_Moshkovitz.SudokuHandling;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace UnitTesting
 {

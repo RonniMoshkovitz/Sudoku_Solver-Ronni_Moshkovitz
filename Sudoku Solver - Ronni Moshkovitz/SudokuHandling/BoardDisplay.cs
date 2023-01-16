@@ -1,9 +1,6 @@
 ﻿using Sudoku_Solver___Ronni_Moshkovitz.BoardProcessing;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Sudoku_Solver___Ronni_Moshkovitz.SudokuHandling
 {

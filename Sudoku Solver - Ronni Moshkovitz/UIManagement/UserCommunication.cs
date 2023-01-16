@@ -1,9 +1,5 @@
 ﻿using Sudoku_Solver___Ronni_Moshkovitz.ReadingAndWriting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Sudoku_Solver___Ronni_Moshkovitz.UIManagement
 {
@@ -29,7 +25,7 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.UIManagement
 
         // This function requests the user for a file path and reads the sudoku string from there.
         // It returns the sudoku string (if reading fails, it prints the error message, and returns null).
-        public static string GetBoardFromFile(out string FilePath)
+        internal static string GetBoardFromFile(out string FilePath)
         {
             TextFileAccess reader = new TextFileReader();
 
@@ -48,7 +44,7 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.UIManagement
         }
 
         // This function inserts the solved sudoku string into a file. If writing fails, it shows the error message.
-        public static void InsertResultToFile(string FilePath, string info)
+        internal static void InsertResultToFile(string FilePath, string info)
         {
             TextFileAccess writer = new TextFileWriter();
             // Set file path to the solutions file (matches the input file, but with a "-solved.txt" ending.
@@ -63,19 +59,19 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.UIManagement
 
 
         // This function asks for a board from the user.
-        public static string GetBoardFromConsole()
+        internal static string GetBoardFromConsole()
         {
             return GetInfo("\nPlease enter a board: ");
         }
 
         // This function shows information to the user.
-        public static void ShowInfo(string info)
+        internal static void ShowInfo(string info)
         {
             _output.Write(info);
         }
 
         // This function presents a request to the user, and returns his response input string.
-        public static string GetInfo(string request)
+        internal static string GetInfo(string request)
         {
             _output.Write(request);
             return _input.Read();
