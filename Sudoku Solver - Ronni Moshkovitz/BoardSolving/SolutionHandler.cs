@@ -60,6 +60,7 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.BoardSolving
 
                 // Separate cell value from the row num restriction.
                 int cellValue = cellValueWithRowNum % side + 1;
+
                 // Place cell on board
                 board[row, col] = cellValue;
 

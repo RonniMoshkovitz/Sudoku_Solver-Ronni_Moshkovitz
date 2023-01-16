@@ -25,10 +25,10 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.BoardSolving
         {
             SetupDimensions(cover);
 
-            // creates the header node for the four-way-linked list (also marks the starting point of the column nodes).
+            // Creates the header node for the four-way-linked list (also marks the starting point of the column nodes).
             ColumnNode headerNode = new ColumnNode("header");
             ColumnNode[] columnNodes = new ColumnNode[_columnsCount];
-
+             
             GenerateColumnNodes(headerNode, columnNodes);
             AddDancingNodesToLayout(cover, columnNodes);
 

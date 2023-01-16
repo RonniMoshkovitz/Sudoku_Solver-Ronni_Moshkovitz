@@ -22,10 +22,12 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.BoardProcessing
 
             // Row and column indexes in the grid
             for (int row = 0; row < size; row++)
+            {
                 for (int column = 0; column < size; column++, inputIndex++)
                 {
                     grid[row, column] = BoardTranslator.ToMatchingInt(inputSudoku[inputIndex]);
                 }
+            }
 
             return grid;
         }
@@ -39,12 +41,13 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.BoardProcessing
 
             // Row and column indexes in the grid
             for (int row = 0; row < size; row++)
+            {
                 for (int column = 0; column < size; column++)
                 {
                     // Add cell to sudoku grid
                     deParsedBoard += BoardTranslator.ToMatchingChar(board[row, column]);
                 }
-
+            }
 
             return deParsedBoard;
         }

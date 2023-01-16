@@ -28,7 +28,9 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.BoardSolving
 
             // Translate the solution only if there is one.
             if (dancingLinks.Solvable)
+            {
                 _handler.TranslateSolution(dancingLinks.Answer, sudoku);
+            }
 
             return dancingLinks.Solvable;
         }
