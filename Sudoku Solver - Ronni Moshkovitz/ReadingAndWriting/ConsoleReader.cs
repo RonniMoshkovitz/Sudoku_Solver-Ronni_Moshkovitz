@@ -7,10 +7,10 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.ReadingAndWriting
     public class ConsoleReader : IReader
     {
         // Constructor for ConsoleReader.
-        public ConsoleReader()
+        public ConsoleReader(Action beforeClosing)
         {
-            // Disables the option to enter "Ctrl + C" or "Ctrl + Break" to terminate the program.
-            Console.CancelKeyPress += new ConsoleCancelEventHandler(CancleTarmination);
+            // Handling "Ctrl + C" or "Ctrl + Break" defult console exit commands by adding finishing steps to it.
+            Console.CancelKeyPress += (object sender, ConsoleCancelEventArgs args) => beforeClosing();
         }
 
         // This function reads input from the console.
@@ -20,13 +20,6 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.ReadingAndWriting
 
             // If null input, we treat it as no input (empty string).
             return input != null ? input : "";
-        }
-
-        // This function is called every time "Ctrl + C" or "Ctrl + Break" is pressed.
-        // It prevents the program from terminating.
-        protected static void CancleTarmination(object sender, ConsoleCancelEventArgs args)
-        {
-            args.Cancel = true;
         }
     }
 }

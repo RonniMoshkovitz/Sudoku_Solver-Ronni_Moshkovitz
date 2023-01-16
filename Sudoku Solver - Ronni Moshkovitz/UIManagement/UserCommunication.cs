@@ -8,8 +8,9 @@ namespace Sudoku_Solver___Ronni_Moshkovitz.UIManagement
     {
         // IWriter to write output.
         private static IWriter _output = new ConsoleWriter();
-        // IReader to read input.
-        private static IReader _input = new ConsoleReader();
+
+        // IReader to read input, set exit function for consoles defult exit command.
+        private static IReader _input = new ConsoleReader(MenuActions.ExitProgram);
 
         // This function shows the wellcome message, the game puzzle, and an example for input.
         public static void ShowStartView()
